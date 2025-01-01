@@ -1,11 +1,6 @@
-local n = "https://raw.githubusercontent.com/flyspeed7/Raw.Dong-Ling-Zhon-Xin.Lua/refs/heads/main/Ping%20Fps.Lua"
+--local n = "https://raw.githubusercontent.com/flyspeed7/Raw.Dong-Ling-Zhon-Xin.Lua/refs/heads/main/Ping%20Fps.Lua"
 local o = "秋枫"
---local v = "版本:13.5"
 local x = "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Revenant"
-
-        local pingTimeSec = game.Players.LocalPlayer:GetNetworkPing()
-        local pingTimeMs = pingTimeSec * 1000
-        local realFPS = workspace:GetRealPhysicsFPS()
 
 local aimbotEnabled = false
 local fovEnabled = false
@@ -205,7 +200,6 @@ local function HeartbeatUpdate()
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
-
 --[[]
 local ScreenGui = Instance.new("ScreenGui") 
  ScreenGui.Name = "Credits" 
@@ -363,7 +357,7 @@ local ScreenGui = Instance.new("ScreenGui")
  print("1") 
  end 
 []]
-loadstring(game:HttpGet(n,true))()
+--loadstring(game:HttpGet(n,true))()
 local A = loadstring(game:HttpGet("https://raw.githubusercontent.com/flyspeed7/Raw.Dong-Ling-Zhon-Xin.Lua/refs/heads/main/Raw.Main-Orion-UI.Lua"))()
 local Window = A:MakeWindow({Name =o, HidePremium = false, SaveConfig = true, ConfigFolder = "Orion"})
 A:MakeNotification({
@@ -402,12 +396,6 @@ about:AddButton({
     end
 })
 
-about:AddButton({
-  Name = "离开服务器",
-  Callback = function()
-     game:Shutdown()
-  end
-})
 local Section = about:AddSection({
         Name = "基础信息"
 })
@@ -5235,42 +5223,6 @@ Tab:AddButton({
           Name = "需要多按几次才可关闭"  
 
   })  
- Tab:AddToggle({  
-          Name = "绘制僵尸",  
-          Default = false,  
-          Callback = function(State,L)  
-        --do State if L then
-     --Esploadto()
-   --else
-  --[[  |
-      |players.PlayerAdded:Connect(function(newPlayer)
-    if showSquares then
-        newPlayer.CharacterAdded:Connect(function()
-            createSquareForPlayer(newPlayer)
-        end)
-    end
-end)
-
--- Update the square positions each frame
-runService.RenderStepped:Connect(function()
-    if showSquares then
-        updateSquares()
-    end
-end)
-
--- Create squares for players already in the game
-for _, targetPlayer in pairs(players:GetPlayers()) do
-    if targetPlayer ~= player then
-        targetPlayer.CharacterAdded:Connect(function()
-            if showSquares then
-                createSquareForPlayer(targetPlayer)
-            end
-        end)
-    end
-end
-]]
-          end  
-  })  
   local Tab= Window:MakeTab({ 
          Name = "制造和销毁武器", 
          Icon = "rbxassetid://7733779610", 
@@ -5278,7 +5230,7 @@ end
  }) 
    local Section = Tab:AddSection({  
 
-          Name = "无限所用:金币 钻石 火"  
+          Name = "无限所有:金币 剑 木头"  
 
   })
 Tab:AddButton({         
